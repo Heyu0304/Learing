@@ -1,7 +1,7 @@
-//��������
-//��P�Σ�P-1ǰ��������õģ����ǰһ���Ⱥ�һ���󣬾ͽ���
-//ʱ�临�Ӷ��� N*2
-//�о��е���ð������
+//插入排序
+//第P次，P-1前都是排序好的，如果前一个比后一个大，就交换
+//时间复杂度是 N*2
+//感觉有点像冒泡排序
 
 void
 InsertionSort(Elementype A[], int N){
@@ -12,7 +12,7 @@ InsertionSort(Elementype A[], int N){
 		for(j=p; j>0 && A[j-1] > A[j];  j--){
 			A[j] = A[j-1]; 
 		}
-		A[j] = Tem; //��A[p]��ֵ����󽻻����ݵ�ǰһ��λ��.
+		A[j] = Tem; //把A[p]赋值给最后交换数据的前一个位置.
 	}
 
 }

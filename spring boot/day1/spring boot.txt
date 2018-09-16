@@ -1,9 +1,9 @@
-jquery¿ÉÒÔÍ¨¹ýajax·½·¨£¬ÉèÖÃ·¢ËÍÇëÇóµÄURL×Ö·û´®,ÉèÖÃpost´«Êä·½Ê½£¬»ñÈ¡Êý¾Ý¡£
-È»ºóController²ãÖÐÓÃ@RequestMapping()À´»ñÈ¡·½·¨Ãû,
-Í¨¹ýreturn List<> ¿ÉÒÔ×Ô¶¯×ª»»³Éjson¸ñÊ½£¬È»ºóÒ³Ãæ»ñÈ¡·µ»ØµÄÊý¾Ý,¾Í¿ÉÒÔ²¼¾ÖÁË¡£
-ÊéP58Ò³
+jqueryå¯ä»¥é€šè¿‡ajaxæ–¹æ³•ï¼Œè®¾ç½®å‘é€è¯·æ±‚çš„URLå­—ç¬¦ä¸²,è®¾ç½®postä¼ è¾“æ–¹å¼ï¼ŒèŽ·å–æ•°æ®ã€‚
+ç„¶åŽControllerå±‚ä¸­ç”¨@RequestMapping()æ¥èŽ·å–æ–¹æ³•å,
+é€šè¿‡return List<> å¯ä»¥è‡ªåŠ¨è½¬æ¢æˆjsonæ ¼å¼ï¼Œç„¶åŽé¡µé¢èŽ·å–è¿”å›žçš„æ•°æ®,å°±å¯ä»¥å¸ƒå±€äº†ã€‚
+ä¹¦P58é¡µ
 
-¿ÉÒÔÍ¨¹ý@RequestBody×¢½â£¬¿ÉÒÔ°ÑJSONÊý¾ÝÉèÖÃµ½¶ÔÓ¦µÄ¶ÔÏóÊôÐÔÖÐ¡£
+å¯ä»¥é€šè¿‡@RequestBodyæ³¨è§£ï¼Œå¯ä»¥æŠŠJSONæ•°æ®è®¾ç½®åˆ°å¯¹åº”çš„å¯¹è±¡å±žæ€§ä¸­ã€‚
 
-js £ºconsolo.log(object)¿ÉÒÔÔÚÇ°Ì¨´òÓ¡·µ»ØµÄÊý¾Ýjson¸ñÊ½¡£
+js ï¼šconsolo.log(object)å¯ä»¥åœ¨å‰å°æ‰“å°è¿”å›žçš„æ•°æ®jsonæ ¼å¼ã€‚
 
