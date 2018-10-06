@@ -1,0 +1,40 @@
+# @JoinColumn注解的使用方法.
+* 在@OneToMany单向关系里面使用的时候,在一方类里使用。例如:
+  person中：
+        @OneToMany(cascade=CascadeType.ALL) @JoinColumn(name="personID")
+        //注释的是另一个表指向本表的外键。
+        public List<Phone> getPhones() { return phones; }
+  指向的是外键。在一对多里面,无论是单向还是双向,映射关系的维护端都是在多的那一方,
+  也就是Phone那里,因为要在数据库面表现的话,也只有让Phone起一个指向Person的外键,
+  不可能在Person里面指向Phone,这一点和一对一不一样,一对一可以在任意一方起一个
+  外键指向对方.可是一对多却不行了.
+
+* 在如果是一对多的双向关系,那么这个注释就要应用到多的那边去了,
+虽然注释还在Person类里面,但是它起的效果却是在Phone里面起一个叫personID的外键,
+因为多的那边要有外键指向少的这边.
+<strange>如果你不加 @JoinColumn(name="personID")这个注释的话,那么JBOSS就会自动帮你生成一张中间表,
+它负现Person和Phone表之间的联系.</strange>
+
+* person和project的多对多单向关系：
+project没有特殊的注解。
+
+person：
+
+@ManyToMany
+public List<Project> getProjects() { return projects; }
+它需要设置中间表来维护关系，在数据库上跟多对多双向，只不过在编程的逻辑中不一样而已。
+
+//类似这个：@JoinTable(name = "PersonANDFlight", joinColumns = {@JoinColumn(name = "personID")},
+//inverseJoinColumns = {@JoinColumn(name = "flightID")})
+其实这个声明不是必要的,当我们不用@JoinTable来声明的时候,JBOSS也会为我们自动生成一个连接用的表,
+
+表名默认是主控端的表名加上下划线"_"再加上反转端的表名.
+
+类似
+
+@ManyToMany(cascade = CascadeType.ALL) @JoinTable(name = "PersonANDFlight",
+　　　　　　　　joinColumns = {@JoinColumn(name = "personID")},
+　　　　　　　　inverseJoinColumns = {@JoinColumn(name = "flightID")}) public List<Flight> getFlights() { return flights; }
+<hr>
+https://blog.csdn.net/u010588262/article/details/76667283
+这个讲的很清晰.上边待定.
